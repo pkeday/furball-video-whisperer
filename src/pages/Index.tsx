@@ -1,3 +1,4 @@
+
 import { ArrowRight, MessageCircle, Play, Zap, Brain, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,7 +20,7 @@ const Index = () => {
             <span className="text-xl font-bold text-gray-900">YT2Go</span>
           </div>
           <div className="text-sm text-gray-600">
-            Powered by <span className="font-semibold text-blue-600">Pkeday</span>
+            Powered by <a href="https://pkeday.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">Pkeday</a>
           </div>
         </div>
       </header>
