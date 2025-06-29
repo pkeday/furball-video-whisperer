@@ -17,7 +17,7 @@ const Index = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">FurballIQ</span>
+            <span className="text-xl font-bold text-gray-900">YT2Go</span>
           </div>
           <div className="text-sm text-gray-600">
             Powered by <span className="font-semibold text-blue-600">Pkeday</span>
@@ -25,29 +25,97 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Turn Any YouTube Video Into
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Smart Insights</span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Get instant summaries and ask follow-up questions about any YouTube video. 
-            Save hours of watching time with AI-powered video intelligence.
-          </p>
-          <Button 
-            onClick={handleWhatsAppClick}
-            size="lg" 
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Try FurballIQ Now
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
-          <p className="text-sm text-gray-500 mt-4">
-            Free to use • No signup required • Works instantly
-          </p>
+      {/* Hero Section with Screenshots */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 items-center">
+            {/* Left Screenshot */}
+            <div className="hidden lg:block">
+              <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200 shadow-lg">
+                <img 
+                  src="/lovable-uploads/f80428ee-dab3-4d9c-8ce7-4912052ea5f3.png" 
+                  alt="YouTube video summary example"
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+              <p className="text-sm text-gray-600 text-center mt-4">
+                Send any YouTube video link via WhatsApp
+              </p>
+            </div>
+
+            {/* Center Content */}
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Turn Any YouTube Video Into
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Smart Insights</span>
+              </h1>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Get instant summaries and ask follow-up questions about any YouTube video directly through WhatsApp. 
+                Save hours of watching time with AI-powered video intelligence.
+              </p>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                <div className="flex items-center justify-center space-x-2 text-green-700">
+                  <MessageCircle className="w-5 h-5" />
+                  <span className="font-semibold">Works entirely on WhatsApp</span>
+                </div>
+                <p className="text-sm text-green-600 mt-1">No app downloads, no signups required</p>
+              </div>
+              <Button 
+                onClick={handleWhatsAppClick}
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Try YT2Go on WhatsApp
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <p className="text-sm text-gray-500 mt-4">
+                Free to use • Instant results • WhatsApp only
+              </p>
+            </div>
+
+            {/* Right Screenshot */}
+            <div className="hidden lg:block">
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200 shadow-lg">
+                <img 
+                  src="/lovable-uploads/6ecfb33f-d911-4f07-81c3-554c4af48f08.png" 
+                  alt="Follow-up questions example"
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+              <p className="text-sm text-gray-600 text-center mt-4">
+                Ask specific questions and get detailed answers
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile Screenshots */}
+          <div className="lg:hidden mt-12 grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200">
+                <img 
+                  src="/lovable-uploads/f80428ee-dab3-4d9c-8ce7-4912052ea5f3.png" 
+                  alt="YouTube video summary example"
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+              <p className="text-sm text-gray-600 text-center">
+                Send any YouTube video link via WhatsApp
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
+                <img 
+                  src="/lovable-uploads/6ecfb33f-d911-4f07-81c3-554c4af48f08.png" 
+                  alt="Follow-up questions example"
+                  className="w-full rounded-lg shadow-md"
+                />
+              </div>
+              <p className="text-sm text-gray-600 text-center">
+                Ask specific questions and get detailed answers
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -59,7 +127,7 @@ const Index = () => {
               How It Works
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Get video insights in three simple steps. No complex setup required.
+              Get video insights in three simple steps. Everything happens in WhatsApp.
             </p>
           </div>
 
@@ -69,9 +137,9 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <MessageCircle className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Click the Link</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Open WhatsApp</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Click on our WhatsApp link to open a chat with FurballIQ
+                  Click our WhatsApp link to start chatting with YT2Go instantly
                 </p>
               </CardContent>
             </Card>
@@ -100,39 +168,6 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
-
-          {/* Screenshots Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              See It In Action
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200">
-                  <img 
-                    src="/lovable-uploads/f80428ee-dab3-4d9c-8ce7-4912052ea5f3.png" 
-                    alt="YouTube video summary example"
-                    className="w-full rounded-lg shadow-md"
-                  />
-                </div>
-                <p className="text-sm text-gray-600 text-center">
-                  Send any YouTube video link to get an instant, comprehensive summary
-                </p>
-              </div>
-              <div className="space-y-4">
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
-                  <img 
-                    src="/lovable-uploads/6ecfb33f-d911-4f07-81c3-554c4af48f08.png" 
-                    alt="Follow-up questions example"
-                    className="w-full rounded-lg shadow-md"
-                  />
-                </div>
-                <p className="text-sm text-gray-600 text-center">
-                  Ask specific questions about the content and get detailed answers
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -141,7 +176,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose FurballIQ?
+              Why Choose YT2Go?
             </h2>
           </div>
 
@@ -175,9 +210,9 @@ const Index = () => {
                 <MessageCircle className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Interactive Q&A</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">WhatsApp Native</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Ask follow-up questions and dive deeper into specific topics from the video.
+                  Everything happens in WhatsApp - no apps to download, no accounts to create, just instant access.
                 </p>
               </div>
             </div>
@@ -187,9 +222,9 @@ const Index = () => {
                 <Zap className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Instant Access</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Instant Results</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  No downloads, no signups. Works directly through WhatsApp for immediate results.
+                  Get summaries and answers within seconds, right in your WhatsApp chat.
                 </p>
               </div>
             </div>
@@ -205,7 +240,7 @@ const Index = () => {
               Ready to Get Smarter About Videos?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands who are already using FurballIQ to learn faster and more efficiently.
+              Join thousands who are already using YT2Go to learn faster and more efficiently through WhatsApp.
             </p>
             <Button 
               onClick={handleWhatsAppClick}
@@ -214,7 +249,7 @@ const Index = () => {
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Start Using FurballIQ
+              Start Using YT2Go on WhatsApp
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
@@ -228,10 +263,10 @@ const Index = () => {
             <div className="w-6 h-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-md flex items-center justify-center">
               <Brain className="w-4 h-4 text-white" />
             </div>
-            <span className="font-semibold">FurballIQ</span>
+            <span className="font-semibold">YT2Go</span>
           </div>
           <p className="text-sm">
-            Powered by Pkeday • Making video content accessible and actionable
+            Powered by Pkeday • Making video content accessible and actionable through WhatsApp
           </p>
         </div>
       </footer>
