@@ -1,4 +1,3 @@
-
 import { ArrowRight, MessageCircle, Play, Zap, Brain, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,96 +24,82 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section with Screenshots */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-8 items-center">
-            {/* Left Screenshot */}
-            <div className="hidden lg:block">
-              <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200 shadow-lg">
-                <img 
-                  src="/lovable-uploads/f80428ee-dab3-4d9c-8ce7-4912052ea5f3.png" 
-                  alt="YouTube video summary example"
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-center mt-4">
-                Send any YouTube video link via WhatsApp
-              </p>
-            </div>
-
-            {/* Center Content */}
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Turn Any YouTube Video Into
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Smart Insights</span>
-              </h1>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Get instant summaries and ask follow-up questions about any YouTube video directly through WhatsApp. 
-                Save hours of watching time with AI-powered video intelligence.
-              </p>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                <div className="flex items-center justify-center space-x-2 text-green-700">
-                  <MessageCircle className="w-5 h-5" />
-                  <span className="font-semibold">Works entirely on WhatsApp</span>
-                </div>
-                <p className="text-sm text-green-600 mt-1">No app downloads, no signups required</p>
-              </div>
-              <Button 
-                onClick={handleWhatsAppClick}
-                size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Try YT2Go on WhatsApp
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <p className="text-sm text-gray-500 mt-4">
-                Free to use • Instant results • WhatsApp only
-              </p>
-            </div>
-
-            {/* Right Screenshot */}
-            <div className="hidden lg:block">
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200 shadow-lg">
-                <img 
-                  src="/lovable-uploads/6ecfb33f-d911-4f07-81c3-554c4af48f08.png" 
-                  alt="Follow-up questions example"
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-center mt-4">
-                Ask specific questions and get detailed answers
-              </p>
+      {/* Hero Section with Background Screenshots */}
+      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+        {/* Background Images */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Left Screenshot */}
+          <div className="absolute left-8 top-16 transform -rotate-6 opacity-20 hidden lg:block">
+            <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-3 border border-green-200 shadow-lg w-64">
+              <img 
+                src="/lovable-uploads/f80428ee-dab3-4d9c-8ce7-4912052ea5f3.png" 
+                alt="YouTube video summary example"
+                className="w-full rounded-lg shadow-md"
+              />
             </div>
           </div>
 
-          {/* Mobile Screenshots */}
-          <div className="lg:hidden mt-12 grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200">
-                <img 
-                  src="/lovable-uploads/f80428ee-dab3-4d9c-8ce7-4912052ea5f3.png" 
-                  alt="YouTube video summary example"
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-center">
-                Send any YouTube video link via WhatsApp
-              </p>
+          {/* Right Screenshot */}
+          <div className="absolute right-8 top-24 transform rotate-6 opacity-20 hidden lg:block">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-3 border border-blue-200 shadow-lg w-64">
+              <img 
+                src="/lovable-uploads/6ecfb33f-d911-4f07-81c3-554c4af48f08.png" 
+                alt="Follow-up questions example"
+                className="w-full rounded-lg shadow-md"
+              />
             </div>
-            <div className="space-y-4">
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
-                <img 
-                  src="/lovable-uploads/6ecfb33f-d911-4f07-81c3-554c4af48f08.png" 
-                  alt="Follow-up questions example"
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
-              <p className="text-sm text-gray-600 text-center">
-                Ask specific questions and get detailed answers
-              </p>
+          </div>
+
+          {/* Additional scattered images for mobile */}
+          <div className="lg:hidden">
+            <div className="absolute right-4 top-8 transform rotate-12 opacity-15 w-48">
+              <img 
+                src="/lovable-uploads/f80428ee-dab3-4d9c-8ce7-4912052ea5f3.png" 
+                alt=""
+                className="w-full rounded-lg"
+              />
             </div>
+            <div className="absolute left-4 bottom-8 transform -rotate-12 opacity-15 w-48">
+              <img 
+                src="/lovable-uploads/6ecfb33f-d911-4f07-81c3-554c4af48f08.png" 
+                alt=""
+                className="w-full rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Get summaries of
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> YouTube videos</span>
+              <br />on WhatsApp
+            </h1>
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed max-w-2xl mx-auto">
+              Get instant summaries and ask follow-up questions about any YouTube video directly through WhatsApp. 
+              Save hours of watching time with AI-powered video intelligence.
+            </p>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 max-w-md mx-auto">
+              <div className="flex items-center justify-center space-x-2 text-green-700">
+                <MessageCircle className="w-5 h-5" />
+                <span className="font-semibold">Works entirely on WhatsApp</span>
+              </div>
+              <p className="text-sm text-green-600 mt-1">No app downloads, no signups required</p>
+            </div>
+            <Button 
+              onClick={handleWhatsAppClick}
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Try YT2Go on WhatsApp
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <p className="text-sm text-gray-500 mt-4">
+              Free to use • Instant results • WhatsApp only
+            </p>
           </div>
         </div>
       </section>
